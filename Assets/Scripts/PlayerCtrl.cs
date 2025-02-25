@@ -6,6 +6,7 @@ public class PlayerCtrl : MonoBehaviour
 {
     [SerializeField] DynamicJoystick dynamicJoystick;
 
+    [SerializeField] int hp;
     [SerializeField] float maxSpd;
 
     private Rigidbody2D rb;
@@ -41,5 +42,19 @@ public class PlayerCtrl : MonoBehaviour
         {
             transform.localScale= new (1, 1);
         }
+    }
+
+    void TakeHit(int damage)
+    {
+        hp -= damage;
+
+        if (hp <= 0){
+            Die();
+        }
+    }
+
+    void Die()
+    {
+
     }
 }

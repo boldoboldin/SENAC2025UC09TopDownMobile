@@ -1,11 +1,16 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UIElements;
 
 public class ElecDrone : EnemyCtrl
 {
     [SerializeField] float distance, chaseDistance, atkDistance;
     
+    [SerializeField] float patrolArea;
+    private Vector2 rndPatrolPos;
+    private float patrolTimer;
+
 
     // Update is called once per frame
     void Update()
@@ -28,16 +33,51 @@ public class ElecDrone : EnemyCtrl
 
     void Patrol()
     {
-        Debug.Log("Patrol");
+        if (patrolTimer <= 0)
+        {
+            rndPatrolPos = new Vector2(
+            transform.position.x + Random.Range(-patrolArea, patrolArea),
+            transform.position.y + Random.Range(-patrolArea, patrolArea)); 
+        
+            patrolTimer = Random.Range(5f, 7f);        
+        }
+
+        transform.position =  Vector2.MoveTowards(transform.position, rndPatrolPos, spd * Time.deltaTime);
+
+        if(patrolTimer > 0)
+        {
+            patrolTimer -= Time.deltaTime;
+        }
+
+        if(rndPatrolPos.x > transform.position.x)
+        {
+            transform.localScale = new Vector2(-1, 1);
+        }
+
+        if(rndPatrolPos.x < transform.position.x)
+        {
+            transform.localScale = new Vector2(1, 1);
+        }
+
     }
 
     void Chase()
     {
-        Debug.Log("Chase");
+        transform.position =  Vector2.MoveTowards(transform.position, player.transform.position, spd * Time.deltaTime);
+
+        if(player.transform.position.x > transform.position.x)
+        {
+            transform.localScale = new Vector2(-1, 1);
+        }
+
+        if(player.transform.position.x < transform.position.x)
+        {
+            transform.localScale = new Vector2(1, 1);
+        }
     }
 
     void ChargeAtk()
     {
-        Debug.Log("ChargeAtk");
+        anim.SetTrigger("Atk");
     }
 }
