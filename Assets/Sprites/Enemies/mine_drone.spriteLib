@@ -1,0 +1,112 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &1
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a5e6fedc2472449cead18ef23b5cb30d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Library:
+  - m_Name: Idle
+    m_Hash: 1008081451
+    m_CategoryList: []
+    m_OverrideEntries:
+    - m_Name: mine_drone_idle_0
+      m_Hash: 383379769
+      m_Sprite: {fileID: 334933946, guid: 545df3bc37027fc4eaa0284cb1570a16, type: 3}
+      m_FromMain: 1
+      m_SpriteOverride: {fileID: 334933946, guid: 545df3bc37027fc4eaa0284cb1570a16, type: 3}
+    - m_Name: mine_drone_idle_1
+      m_Hash: 568252847
+      m_Sprite: {fileID: 159352380, guid: 545df3bc37027fc4eaa0284cb1570a16, type: 3}
+      m_FromMain: 1
+      m_SpriteOverride: {fileID: 159352380, guid: 545df3bc37027fc4eaa0284cb1570a16, type: 3}
+    - m_Name: mine_drone_idle_2
+      m_Hash: 953649173
+      m_Sprite: {fileID: 544103494, guid: 545df3bc37027fc4eaa0284cb1570a16, type: 3}
+      m_FromMain: 1
+      m_SpriteOverride: {fileID: 544103494, guid: 545df3bc37027fc4eaa0284cb1570a16, type: 3}
+    m_FromMain: 1
+    m_EntryOverrideCount: 0
+  - m_Name: Death
+    m_Hash: 646380074
+    m_CategoryList: []
+    m_OverrideEntries:
+    - m_Name: mine_drone_death_0
+      m_Hash: 318196883
+      m_Sprite: {fileID: 2072047340, guid: fd7621cbeeb79834b9aa41fa7e3bc9c1, type: 3}
+      m_FromMain: 0
+      m_SpriteOverride: {fileID: 2072047340, guid: fd7621cbeeb79834b9aa41fa7e3bc9c1, type: 3}
+    - m_Name: mine_drone_death_1
+      m_Hash: 636517381
+      m_Sprite: {fileID: 683443596, guid: fd7621cbeeb79834b9aa41fa7e3bc9c1, type: 3}
+      m_FromMain: 0
+      m_SpriteOverride: {fileID: 683443596, guid: fd7621cbeeb79834b9aa41fa7e3bc9c1, type: 3}
+    m_FromMain: 1
+    m_EntryOverrideCount: 2
+  - m_Name: Actvating
+    m_Hash: 460952861
+    m_CategoryList: []
+    m_OverrideEntries:
+    - m_Name: mine_drone_activated_0
+      m_Hash: 93303948
+      m_Sprite: {fileID: -180093274, guid: 1f759ef3adbda2c4897b62cdcc66fc98, type: 3}
+      m_FromMain: 0
+      m_SpriteOverride: {fileID: -180093274, guid: 1f759ef3adbda2c4897b62cdcc66fc98, type: 3}
+    - m_Name: mine_drone_activated_1
+      m_Hash: 847807514
+      m_Sprite: {fileID: 149061855, guid: 1f759ef3adbda2c4897b62cdcc66fc98, type: 3}
+      m_FromMain: 0
+      m_SpriteOverride: {fileID: 149061855, guid: 1f759ef3adbda2c4897b62cdcc66fc98, type: 3}
+    m_FromMain: 0
+    m_EntryOverrideCount: 2
+  - m_Name: Exploding
+    m_Hash: 510592380
+    m_CategoryList: []
+    m_OverrideEntries:
+    - m_Name: mine_drone_exploding_0
+      m_Hash: 279494844
+      m_Sprite: {fileID: -1498784356, guid: f8ec0e7e8561bc94995980397b84a1e7, type: 3}
+      m_FromMain: 0
+      m_SpriteOverride: {fileID: -1498784356, guid: f8ec0e7e8561bc94995980397b84a1e7, type: 3}
+    - m_Name: mine_drone_exploding_1
+      m_Hash: 665841706
+      m_Sprite: {fileID: 1647693300, guid: f8ec0e7e8561bc94995980397b84a1e7, type: 3}
+      m_FromMain: 0
+      m_SpriteOverride: {fileID: 1647693300, guid: f8ec0e7e8561bc94995980397b84a1e7, type: 3}
+    - m_Name: mine_drone_exploding_2
+      m_Hash: 1051107728
+      m_Sprite: {fileID: -1151560343, guid: f8ec0e7e8561bc94995980397b84a1e7, type: 3}
+      m_FromMain: 0
+      m_SpriteOverride: {fileID: -1151560343, guid: f8ec0e7e8561bc94995980397b84a1e7, type: 3}
+    - m_Name: mine_drone_exploding_3
+      m_Hash: 161583366
+      m_Sprite: {fileID: 1911042095, guid: f8ec0e7e8561bc94995980397b84a1e7, type: 3}
+      m_FromMain: 0
+      m_SpriteOverride: {fileID: 1911042095, guid: f8ec0e7e8561bc94995980397b84a1e7, type: 3}
+    - m_Name: mine_drone_exploding_4
+      m_Hash: 398787749
+      m_Sprite: {fileID: -2056324304, guid: f8ec0e7e8561bc94995980397b84a1e7, type: 3}
+      m_FromMain: 0
+      m_SpriteOverride: {fileID: -2056324304, guid: f8ec0e7e8561bc94995980397b84a1e7, type: 3}
+    - m_Name: mine_drone_exploding_5
+      m_Hash: 549598259
+      m_Sprite: {fileID: -2054015637, guid: f8ec0e7e8561bc94995980397b84a1e7, type: 3}
+      m_FromMain: 0
+      m_SpriteOverride: {fileID: -2054015637, guid: f8ec0e7e8561bc94995980397b84a1e7, type: 3}
+    - m_Name: mine_drone_exploding_6
+      m_Hash: 969631113
+      m_Sprite: {fileID: 2001388034, guid: f8ec0e7e8561bc94995980397b84a1e7, type: 3}
+      m_FromMain: 0
+      m_SpriteOverride: {fileID: 2001388034, guid: f8ec0e7e8561bc94995980397b84a1e7, type: 3}
+    m_FromMain: 0
+    m_EntryOverrideCount: 7
+  m_PrimaryLibraryGUID: 6aadb64f30312f345acb5e53bbfeb48b
+  m_ModificationHash: 638752855718608325
+  m_Version: 1

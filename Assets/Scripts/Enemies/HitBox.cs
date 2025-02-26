@@ -4,14 +4,19 @@ using UnityEngine;
 
 public class HitBox : MonoBehaviour
 {
+    EnemyCtrl enemyCtrl;
+
+    void Start()
+    {
+        enemyCtrl = GetComponentInParent<EnemyCtrl>();
+    }
+    
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if(collision.CompareTag("Player"))
+        if (collision.CompareTag("Player"))
         {
             PlayerCtrl playerCtrl = collision.GetComponent<PlayerCtrl>();
-            playerCtrl.TakeHit(1);
-
-            Debug.Log("Atacou");
+            playerCtrl.TakeHit(enemyCtrl.damage);
         }
     }
 }

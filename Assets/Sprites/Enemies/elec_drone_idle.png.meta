@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 286c22a19a3075c46a0423de648ef063
+guid: e9a4916d38eb3174e98095685fd502d2
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -48,7 +48,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 32
+  spritePixelsToUnits: 16
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -137,8 +137,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: cc02be110453f9a498b4bfdeec11c0a0
-      internalID: 1546396655
+      spriteID: 8f6e97e66cb4d6d4880fd0d1570f364d
+      internalID: 1297654403
       vertices: []
       indices: 
       edges: []
@@ -158,8 +158,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 97e5306a4274d1843bd8e24c5a7ab46e
-      internalID: 1785258499
+      spriteID: a15977a59ac3b4a4190e61b0c59bd501
+      internalID: -1052261750
       vertices: []
       indices: 
       edges: []
@@ -179,8 +179,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 08e743d47d86b7543878d03831d54dc9
-      internalID: 2074027867
+      spriteID: a215572096a58e346b86fb00d86b0238
+      internalID: 1872262312
       vertices: []
       indices: 
       edges: []
@@ -196,9 +196,9 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      elec_drone_idle_0: 1546396655
-      elec_drone_idle_1: 1785258499
-      elec_drone_idle_2: 2074027867
+      elec_drone_idle_0: 1297654403
+      elec_drone_idle_1: -1052261750
+      elec_drone_idle_2: 1872262312
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

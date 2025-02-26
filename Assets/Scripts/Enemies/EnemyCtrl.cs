@@ -5,12 +5,16 @@ using UnityEngine;
 public class EnemyCtrl : MonoBehaviour
 {
     [SerializeField] protected GameObject player;
+    [SerializeField] protected GameObject sExplosionFX;
+
+    [SerializeField] protected float  distance;
 
     [SerializeField] protected int hp;
     [SerializeField] protected float spd;
+    public int damage;
 
     protected Animator anim;
-
+        
     // Start is called before the first frame update
     void Start()
     {
@@ -19,8 +23,23 @@ public class EnemyCtrl : MonoBehaviour
     }
 
     // Update is called once per frame
-    void Update()
+    public virtual void Update()
+    {  
+
+    }
+
+    public void TakeHit(int damage)
     {
-        
+        hp -= damage;
+
+        if (hp <= 0)
+        {
+            Die();
+        }
+    }
+
+    private void Die()
+    {
+        anim.SetTrigger("Die");
     }
 }

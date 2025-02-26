@@ -17,39 +17,39 @@ MonoBehaviour:
     m_Hash: 1008081451
     m_CategoryList: []
     m_OverrideEntries:
-    - m_Name: elec_drone_idle_0
-      m_Hash: 749115129
-      m_Sprite: {fileID: 1546396655, guid: 286c22a19a3075c46a0423de648ef063, type: 3}
+    - m_Name: mine_drone_idle_0
+      m_Hash: 383379769
+      m_Sprite: {fileID: 334933946, guid: 545df3bc37027fc4eaa0284cb1570a16, type: 3}
       m_FromMain: 0
-      m_SpriteOverride: {fileID: 1546396655, guid: 286c22a19a3075c46a0423de648ef063, type: 3}
-    - m_Name: elec_drone_idle_1
-      m_Hash: 463578735
-      m_Sprite: {fileID: 1785258499, guid: 286c22a19a3075c46a0423de648ef063, type: 3}
+      m_SpriteOverride: {fileID: 334933946, guid: 545df3bc37027fc4eaa0284cb1570a16, type: 3}
+    - m_Name: mine_drone_idle_1
+      m_Hash: 568252847
+      m_Sprite: {fileID: 159352380, guid: 545df3bc37027fc4eaa0284cb1570a16, type: 3}
       m_FromMain: 0
-      m_SpriteOverride: {fileID: 1785258499, guid: 286c22a19a3075c46a0423de648ef063, type: 3}
-    - m_Name: elec_drone_idle_2
-      m_Hash: 44627925
-      m_Sprite: {fileID: 2074027867, guid: 286c22a19a3075c46a0423de648ef063, type: 3}
+      m_SpriteOverride: {fileID: 159352380, guid: 545df3bc37027fc4eaa0284cb1570a16, type: 3}
+    - m_Name: mine_drone_idle_2
+      m_Hash: 953649173
+      m_Sprite: {fileID: 544103494, guid: 545df3bc37027fc4eaa0284cb1570a16, type: 3}
       m_FromMain: 0
-      m_SpriteOverride: {fileID: 2074027867, guid: 286c22a19a3075c46a0423de648ef063, type: 3}
+      m_SpriteOverride: {fileID: 544103494, guid: 545df3bc37027fc4eaa0284cb1570a16, type: 3}
     m_FromMain: 0
     m_EntryOverrideCount: 3
   - m_Name: Death
     m_Hash: 646380074
     m_CategoryList: []
     m_OverrideEntries:
-    - m_Name: elec_drone_death_0
-      m_Hash: 153743708
-      m_Sprite: {fileID: 270620297, guid: 7f288d6a48cc46a4aafd85a66d948ab0, type: 3}
+    - m_Name: mine_drone_death_0
+      m_Hash: 318196883
+      m_Sprite: {fileID: 2072047340, guid: fd7621cbeeb79834b9aa41fa7e3bc9c1, type: 3}
       m_FromMain: 0
-      m_SpriteOverride: {fileID: 270620297, guid: 7f288d6a48cc46a4aafd85a66d948ab0, type: 3}
-    - m_Name: elec_drone_death_1
-      m_Hash: 1043251658
-      m_Sprite: {fileID: 1047236131, guid: 7f288d6a48cc46a4aafd85a66d948ab0, type: 3}
+      m_SpriteOverride: {fileID: 2072047340, guid: fd7621cbeeb79834b9aa41fa7e3bc9c1, type: 3}
+    - m_Name: mine_drone_death_1
+      m_Hash: 636517381
+      m_Sprite: {fileID: 683443596, guid: fd7621cbeeb79834b9aa41fa7e3bc9c1, type: 3}
       m_FromMain: 0
-      m_SpriteOverride: {fileID: 1047236131, guid: 7f288d6a48cc46a4aafd85a66d948ab0, type: 3}
+      m_SpriteOverride: {fileID: 683443596, guid: fd7621cbeeb79834b9aa41fa7e3bc9c1, type: 3}
     m_FromMain: 0
     m_EntryOverrideCount: 2
   m_PrimaryLibraryGUID: 
-  m_ModificationHash: 638754894075104734
+  m_ModificationHash: 638752857045154998
   m_Version: 1

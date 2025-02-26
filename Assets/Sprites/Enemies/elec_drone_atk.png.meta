@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: b3abcb63e4432fe4a962dbf62578dca7
+guid: bbe5198049108c34bbce943ee5979549
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -48,7 +48,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 32
+  spritePixelsToUnits: 16
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -137,8 +137,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 88403b2260e6fd948bf75a155c4b188e
-      internalID: -587747565
+      spriteID: c440649c47f4f844ab68c6f796f6475a
+      internalID: 1881972451
       vertices: []
       indices: 
       edges: []
@@ -158,8 +158,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: b6ece0bd9db28d24b88114d94dd53a0a
-      internalID: -1042043675
+      spriteID: 19814b48edb289d4c92bbcbae32a7687
+      internalID: -554184127
       vertices: []
       indices: 
       edges: []
@@ -179,8 +179,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 9ce6988e36e0ded4b804a8e6a911e2da
-      internalID: 1037032523
+      spriteID: 295c87e87c57e984eb5c45b63a2b594f
+      internalID: 1369346216
       vertices: []
       indices: 
       edges: []
@@ -200,8 +200,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: abd0031f9e089b64ba9c62cb88cd277e
-      internalID: 617622252
+      spriteID: 94d0e374cba50d847ac1598bb41d6839
+      internalID: -23069471
       vertices: []
       indices: 
       edges: []
@@ -221,8 +221,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: b9ceaa513fabe6348a3949d0961557fb
-      internalID: 65539949
+      spriteID: aca511745ddc3e64485e18742bf99179
+      internalID: -711370799
       vertices: []
       indices: 
       edges: []
@@ -242,8 +242,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: c8268dc8c91391349b3459e6c597aabd
-      internalID: 544966201
+      spriteID: 33624d4941076194eb4869244de63af8
+      internalID: -614984431
       vertices: []
       indices: 
       edges: []
@@ -263,8 +263,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 25c56e789fd6adb4699734531dd6d888
-      internalID: -1510483844
+      spriteID: caa242e46619e44428ed66e2b55365e0
+      internalID: 216507659
       vertices: []
       indices: 
       edges: []
@@ -284,8 +284,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 05270ddfdd3a5d64fb2f6f428f3d006f
-      internalID: -1382968666
+      spriteID: a92e6a0657bf21b408ded7b87a0bd85d
+      internalID: 418148888
       vertices: []
       indices: 
       edges: []
@@ -305,8 +305,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 4918d892a85f11a49b3ffa89ff424c31
-      internalID: -490628420
+      spriteID: c6e42b5221d9838419086f398cdd0912
+      internalID: -2102988525
       vertices: []
       indices: 
       edges: []
@@ -326,8 +326,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 3b5eb99f8ebe75a4bb1114f44121880e
-      internalID: 1223817660
+      spriteID: 639b3102107d43641ade449b92f05333
+      internalID: 27647811
       vertices: []
       indices: 
       edges: []
@@ -343,16 +343,16 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      elec_drone_atk_0: -587747565
-      elec_drone_atk_1: -1042043675
-      elec_drone_atk_2: 1037032523
-      elec_drone_atk_3: 617622252
-      elec_drone_atk_4: 65539949
-      elec_drone_atk_5: 544966201
-      elec_drone_atk_6: -1510483844
-      elec_drone_atk_7: -1382968666
-      elec_drone_atk_8: -490628420
-      elec_drone_atk_9: 1223817660
+      elec_drone_atk_0: 1881972451
+      elec_drone_atk_1: -554184127
+      elec_drone_atk_2: 1369346216
+      elec_drone_atk_3: -23069471
+      elec_drone_atk_4: -711370799
+      elec_drone_atk_5: -614984431
+      elec_drone_atk_6: 216507659
+      elec_drone_atk_7: 418148888
+      elec_drone_atk_8: -2102988525
+      elec_drone_atk_9: 27647811
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

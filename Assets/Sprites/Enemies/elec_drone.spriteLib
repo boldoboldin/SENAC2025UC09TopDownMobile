@@ -1,0 +1,137 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &1
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a5e6fedc2472449cead18ef23b5cb30d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Library:
+  - m_Name: Idle
+    m_Hash: 1008081451
+    m_CategoryList: []
+    m_OverrideEntries:
+    - m_Name: mine_drone_idle_0
+      m_Hash: 383379769
+      m_Sprite: {fileID: 334933946, guid: 545df3bc37027fc4eaa0284cb1570a16, type: 3}
+      m_FromMain: 1
+      m_SpriteOverride: {fileID: 1297654403, guid: e9a4916d38eb3174e98095685fd502d2, type: 3}
+    - m_Name: mine_drone_idle_1
+      m_Hash: 568252847
+      m_Sprite: {fileID: 159352380, guid: 545df3bc37027fc4eaa0284cb1570a16, type: 3}
+      m_FromMain: 1
+      m_SpriteOverride: {fileID: -1052261750, guid: e9a4916d38eb3174e98095685fd502d2, type: 3}
+    - m_Name: mine_drone_idle_2
+      m_Hash: 953649173
+      m_Sprite: {fileID: 544103494, guid: 545df3bc37027fc4eaa0284cb1570a16, type: 3}
+      m_FromMain: 1
+      m_SpriteOverride: {fileID: 1872262312, guid: e9a4916d38eb3174e98095685fd502d2, type: 3}
+    m_FromMain: 1
+    m_EntryOverrideCount: 3
+  - m_Name: Death
+    m_Hash: 646380074
+    m_CategoryList: []
+    m_OverrideEntries:
+    - m_Name: mine_drone_death_0
+      m_Hash: 318196883
+      m_Sprite: {fileID: 2072047340, guid: fd7621cbeeb79834b9aa41fa7e3bc9c1, type: 3}
+      m_FromMain: 1
+      m_SpriteOverride: {fileID: 593482520, guid: 9cf49582a3e3f624f9508a78335a6306, type: 3}
+    - m_Name: mine_drone_death_1
+      m_Hash: 636517381
+      m_Sprite: {fileID: 683443596, guid: fd7621cbeeb79834b9aa41fa7e3bc9c1, type: 3}
+      m_FromMain: 1
+      m_SpriteOverride: {fileID: 99764479, guid: 9cf49582a3e3f624f9508a78335a6306, type: 3}
+    m_FromMain: 1
+    m_EntryOverrideCount: 2
+  - m_Name: Charging
+    m_Hash: 864877170
+    m_CategoryList: []
+    m_OverrideEntries:
+    - m_Name: elec_drone_charging_0
+      m_Hash: 121021691
+      m_Sprite: {fileID: 1334985464, guid: 00185c2a42541c84293192d9b3981140, type: 3}
+      m_FromMain: 0
+      m_SpriteOverride: {fileID: 1334985464, guid: 00185c2a42541c84293192d9b3981140, type: 3}
+    - m_Name: elec_drone_charging_1
+      m_Hash: 808555629
+      m_Sprite: {fileID: 1396268308, guid: 00185c2a42541c84293192d9b3981140, type: 3}
+      m_FromMain: 0
+      m_SpriteOverride: {fileID: 1396268308, guid: 00185c2a42541c84293192d9b3981140, type: 3}
+    - m_Name: elec_drone_charging_2
+      m_Hash: 691586519
+      m_Sprite: {fileID: -659569757, guid: 00185c2a42541c84293192d9b3981140, type: 3}
+      m_FromMain: 0
+      m_SpriteOverride: {fileID: -659569757, guid: 00185c2a42541c84293192d9b3981140, type: 3}
+    - m_Name: elec_drone_charging_3
+      m_Hash: 507508033
+      m_Sprite: {fileID: -1193314663, guid: 00185c2a42541c84293192d9b3981140, type: 3}
+      m_FromMain: 0
+      m_SpriteOverride: {fileID: -1193314663, guid: 00185c2a42541c84293192d9b3981140, type: 3}
+    m_FromMain: 0
+    m_EntryOverrideCount: 4
+  - m_Name: Electrocuting
+    m_Hash: 330866559
+    m_CategoryList: []
+    m_OverrideEntries:
+    - m_Name: elec_drone_atk_0
+      m_Hash: 854314025
+      m_Sprite: {fileID: 1881972451, guid: bbe5198049108c34bbce943ee5979549, type: 3}
+      m_FromMain: 0
+      m_SpriteOverride: {fileID: 1881972451, guid: bbe5198049108c34bbce943ee5979549, type: 3}
+    - m_Name: elec_drone_atk_1
+      m_Hash: 99417279
+      m_Sprite: {fileID: -554184127, guid: bbe5198049108c34bbce943ee5979549, type: 3}
+      m_FromMain: 0
+      m_SpriteOverride: {fileID: -554184127, guid: bbe5198049108c34bbce943ee5979549, type: 3}
+    - m_Name: elec_drone_atk_2
+      m_Hash: 484814085
+      m_Sprite: {fileID: 1369346216, guid: bbe5198049108c34bbce943ee5979549, type: 3}
+      m_FromMain: 0
+      m_SpriteOverride: {fileID: 1369346216, guid: bbe5198049108c34bbce943ee5979549, type: 3}
+    - m_Name: elec_drone_atk_3
+      m_Hash: 736271763
+      m_Sprite: {fileID: -23069471, guid: bbe5198049108c34bbce943ee5979549, type: 3}
+      m_FromMain: 0
+      m_SpriteOverride: {fileID: -23069471, guid: bbe5198049108c34bbce943ee5979549, type: 3}
+    - m_Name: elec_drone_atk_4
+      m_Hash: 897976368
+      m_Sprite: {fileID: -711370799, guid: bbe5198049108c34bbce943ee5979549, type: 3}
+      m_FromMain: 0
+      m_SpriteOverride: {fileID: -711370799, guid: bbe5198049108c34bbce943ee5979549, type: 3}
+    - m_Name: elec_drone_atk_5
+      m_Hash: 42023078
+      m_Sprite: {fileID: -614984431, guid: bbe5198049108c34bbce943ee5979549, type: 3}
+      m_FromMain: 0
+      m_SpriteOverride: {fileID: -614984431, guid: bbe5198049108c34bbce943ee5979549, type: 3}
+    - m_Name: elec_drone_atk_6
+      m_Hash: 461924636
+      m_Sprite: {fileID: 216507659, guid: bbe5198049108c34bbce943ee5979549, type: 3}
+      m_FromMain: 0
+      m_SpriteOverride: {fileID: 216507659, guid: bbe5198049108c34bbce943ee5979549, type: 3}
+    - m_Name: elec_drone_atk_7
+      m_Hash: 747592074
+      m_Sprite: {fileID: 418148888, guid: bbe5198049108c34bbce943ee5979549, type: 3}
+      m_FromMain: 0
+      m_SpriteOverride: {fileID: 418148888, guid: bbe5198049108c34bbce943ee5979549, type: 3}
+    - m_Name: elec_drone_atk_8
+      m_Hash: 1009796123
+      m_Sprite: {fileID: -2102988525, guid: bbe5198049108c34bbce943ee5979549, type: 3}
+      m_FromMain: 0
+      m_SpriteOverride: {fileID: -2102988525, guid: bbe5198049108c34bbce943ee5979549, type: 3}
+    - m_Name: elec_drone_atk_9
+      m_Hash: 188183693
+      m_Sprite: {fileID: 27647811, guid: bbe5198049108c34bbce943ee5979549, type: 3}
+      m_FromMain: 0
+      m_SpriteOverride: {fileID: 27647811, guid: bbe5198049108c34bbce943ee5979549, type: 3}
+    m_FromMain: 0
+    m_EntryOverrideCount: 0
+  m_PrimaryLibraryGUID: 6aadb64f30312f345acb5e53bbfeb48b
+  m_ModificationHash: 638752857616691438
+  m_Version: 1

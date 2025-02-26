@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 7f288d6a48cc46a4aafd85a66d948ab0
+guid: 9cf49582a3e3f624f9508a78335a6306
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -48,7 +48,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 32
+  spritePixelsToUnits: 16
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -137,8 +137,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 902ebf552b6bb1446bcf21640c1627a8
-      internalID: 270620297
+      spriteID: dac49ef2edcc7ab4d8cf668f6788e4b5
+      internalID: 593482520
       vertices: []
       indices: 
       edges: []
@@ -158,8 +158,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: aac241c14c8c8f34b9a2685929d79232
-      internalID: 1047236131
+      spriteID: ee9b5e9cd40561144a821fd0000b8c5e
+      internalID: 99764479
       vertices: []
       indices: 
       edges: []
@@ -175,8 +175,8 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      elec_drone_death_0: 270620297
-      elec_drone_death_1: 1047236131
+      elec_drone_death_0: 593482520
+      elec_drone_death_1: 99764479
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

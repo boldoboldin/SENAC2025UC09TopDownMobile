@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 6020da934e93a7042aa38daa9ac79068
+guid: 00185c2a42541c84293192d9b3981140
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -48,7 +48,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 32
+  spritePixelsToUnits: 16
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -137,8 +137,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: c61976a0dbd6ad9468d56acd20fc350e
-      internalID: -212976435
+      spriteID: f5b6c26cc33e56b46a7969299b643608
+      internalID: 1334985464
       vertices: []
       indices: 
       edges: []
@@ -158,8 +158,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 3e10c842096282b47911f9a94ed5ec5a
-      internalID: -218237336
+      spriteID: 5871c1286c5d2b449bb499ece6139d8f
+      internalID: 1396268308
       vertices: []
       indices: 
       edges: []
@@ -179,8 +179,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 7fed5157b19d3f0418f422ebcff98bff
-      internalID: 593351521
+      spriteID: b6a5d1a8b06053c40869e7807a482b16
+      internalID: -659569757
       vertices: []
       indices: 
       edges: []
@@ -200,8 +200,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 8a5d7ed02de0e634a98120c415ca77be
-      internalID: 1435023929
+      spriteID: 3a590d9748fc5cf4ea7cd010ca940cda
+      internalID: -1193314663
       vertices: []
       indices: 
       edges: []
@@ -217,10 +217,10 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      elec_drone_charging_0: -212976435
-      elec_drone_charging_1: -218237336
-      elec_drone_charging_2: 593351521
-      elec_drone_charging_3: 1435023929
+      elec_drone_charging_0: 1334985464
+      elec_drone_charging_1: 1396268308
+      elec_drone_charging_2: -659569757
+      elec_drone_charging_3: -1193314663
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
