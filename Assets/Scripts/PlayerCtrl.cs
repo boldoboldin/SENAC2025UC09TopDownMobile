@@ -9,6 +9,8 @@ public class PlayerCtrl : MonoBehaviour
     [SerializeField] int hp;
     [SerializeField] float maxSpd;
 
+    private bool canMove;
+
     private Rigidbody2D rb;
     private Animator anim;
     
@@ -29,9 +31,11 @@ public class PlayerCtrl : MonoBehaviour
 
         float currentSpd = Mathf.Lerp (0, maxSpd, direction.magnitude);
 
-        rb.velocity = direction * currentSpd;
-
-        anim.SetFloat("moveInput", currentSpd); 
+        if (canMove == true)
+        {
+            rb.velocity = direction * currentSpd;
+            anim.SetFloat("moveInput", currentSpd); 
+        }
 
         if(inputX > 0)
         {
@@ -44,9 +48,18 @@ public class PlayerCtrl : MonoBehaviour
         }
     }
 
-    void TakeHit(int damage)
+    public void ReturnMove()
+    {
+        canMove = true;
+    }
+
+    public void TakeHit(int damage)
     {
         hp -= damage;
+        Debug.Log("Deu dano");
+        anim.SetTrigger("Hit");
+
+        canMove = false;
 
         if (hp <= 0){
             Die();
