@@ -27,5 +27,6 @@ public class MineDrone : EnemyCtrl
         Vector2 instatePos = new Vector2(transform.position.x, transform.position.y + 1f);
 
         GameObject fx = Instantiate (sExplosionFX, instatePos, transform.rotation);
+        Destroy(fx, 3f);
     }
 }
