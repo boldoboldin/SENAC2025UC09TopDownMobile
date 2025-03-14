@@ -2,62 +2,56 @@ using UnityEngine;
 
 public class PlayerCtrl : MonoBehaviour
 {
-    [SerializeField] DynamicJoystick dynamicJoystick;
+    [SerializeField] DynamicJoystick leftJoystick, rightJoystick;
 
     private Rigidbody2D rb;
-    private Animator anim;
+    private Animator anim, weaponAnim;
 
+    [SerializeField] private GameObject weapon, shotPos, smokeFX,  sparkFX;
+    [SerializeField] float shotTimer;
+    private float currentShotTimer = 0f;
+    [SerializeField] SpriteRenderer aim;
+    
     [SerializeField] protected int hp, damage;
     [SerializeField] float maxSpd;
-
-    private bool canMove = true;
+    
+    
+    private bool canMove = true, isFliped = false, isAiming = false;
+    [SerializeField] LayerMask ignoredLayers;
 
     // Start is called before the first frame update
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
         anim = GetComponent<Animator>();
+        weaponAnim = weapon.GetComponent<Animator>();
     }
 
     // Update is called once per frame
     void FixedUpdate()
     {
-        float inputX = dynamicJoystick.Horizontal;
-        float inputY = dynamicJoystick.Vertical;
+        Move();
+    }
+
+    void Move()
+    {
+        float inputX = leftJoystick.Horizontal;
+        float inputY = leftJoystick.Vertical;
 
         Vector2 direction = new Vector2(inputX, inputY);
 
         float currentSpd = Mathf.Lerp(0, maxSpd, direction.magnitude);
 
-        if (canMove == true)
+        if (canMove)
         {
-            rb.velocity = direction * currentSpd;
-
-            anim.SetFloat("moveInput", currentSpd);
-        }
-        else
-        {
-            rb.velocity = Vector2.zero;
-        }
-
-        if (inputX > 0)
-        {
-            transform.localScale = new (-1,1);
-        }
-
-        if (inputX < 0)
-        {
-            transform.localScale = new(1,1);
-        }
-
-        if (inputY > 0)
-        {
-            //
-        }
-
-        if (inputY < 0)
-        {
-            //
+           if(isAiming)
+           {
+                rb.velocity = direction * currentSpd / 2;
+           }
+           else
+           {
+                rb.velocity = direction * currentSpd;
+           }
         }
     }
 
