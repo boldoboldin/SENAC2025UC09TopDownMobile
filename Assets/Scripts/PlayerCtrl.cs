@@ -15,7 +15,6 @@ public class PlayerCtrl : MonoBehaviour
     [SerializeField] protected int hp, damage;
     [SerializeField] float maxSpd;
     
-    
     private bool canMove = true, isFliped = false, isAiming = false;
     [SerializeField] LayerMask ignoredLayers;
 
@@ -52,6 +51,68 @@ public class PlayerCtrl : MonoBehaviour
            {
                 rb.velocity = direction * currentSpd;
            }
+
+           anim.SetFloat("moveInput", currentSpd);
+        }
+        else
+        {
+            rb.velocity = Vector2.zero;
+        }
+
+        if(!isAiming)
+        {
+            if (inputX > 0)
+            {
+                transform.localScale = new Vector2(-1, 1);
+                isFliped = true;
+            }
+            else
+            {
+                transform.localScale = new Vector2(1, 1);
+                isFliped = false;
+            }
+        }
+    }
+
+    void WeaponMove()
+    {
+        float inputX = rightJoystick.Horizontal;
+        float inputY = rightJoystick.Vertical;
+
+        Vector2 direction = isFliped ? new Vector2(inputX, inputY) : new Vector2(-inputX, -inputY);
+    
+    
+        if (direction.magnitude > 0)
+        {
+            float angle = Mathf.Atan2(direction.y, direction.x) * Mathf.Rad2Deg;
+
+            weapon.transform.rotation = Quaternion.Slerp(weapon.transform.rotation, Quaternion.Euler(0, 0, angle), maxSpd * 2 * Time.deltaTime);
+        }
+
+        if (inputX != 0 && inputY != 0)
+        {
+            isAiming = true;
+
+            if(currentShotTimer <= shotTimer)
+            {
+                currentShotTimer += 1 * Time.deltaTime;
+            }
+            else
+            {
+                // atirar aqui
+                currentShotTimer = 9999;
+            }
+
+            if (inputX > 0)
+            {
+                transform.localScale = new Vector2(-1, 1);
+                isFliped = true;
+            }
+            else
+            {
+                transform.localScale = new Vector2(1, 1);
+                isFliped = false;
+            }
         }
     }
 
