@@ -71,7 +71,26 @@ public class PlayerCtrl : MonoBehaviour
                 transform.localScale = new Vector2(1, 1);
                 isFliped = false;
             }
+
+            Vector2 aimDirection = isFliped ? weapon.transform.right : -weapon.transform.right;
+            RaycastHit2D hit = Physics2D.Raycast(weapon.transform.position, aimDirection, 9f, ~ignoredLayers);
+
+            if (hit.collider != null)
+            {
+                float distance = hit.distance;
+                //Ajustar mira
+            }
         }
+        else
+        {
+            isAiming = false;
+        }
+    }
+
+    void AdjustAimWidth (float distance)
+    {
+        float currentWidth = Mathf.Clamp(Mathf.Abs(distance), 3f, 9f);
+        aim.size = new Vector2(currentWidth, 0.0625f);
     }
 
     void WeaponMove()
@@ -100,7 +119,7 @@ public class PlayerCtrl : MonoBehaviour
             else
             {
                 // atirar aqui
-                currentShotTimer = 9999;
+                currentShotTimer = 9;
             }
 
             if (inputX > 0)
