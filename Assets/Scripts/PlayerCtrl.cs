@@ -87,6 +87,30 @@ public class PlayerCtrl : MonoBehaviour
         }
     }
 
+    void Shoot()
+    {
+        Vector2 direction = isFliped ?  weapon.transform.right : -weapon.transform.right;
+        RaycastHit2D hit = Physics2D.Raycast (weapon.transform.position, direction, Mathf.Infinity, ~ignoredLayers);
+
+        if (hit.collider != null)
+        {
+            if (hit.collider.CompareTag("Enemy"))
+            {
+                EnemyCtrl enemyCtrl = hit.collider.GetComponent<EnemyCtrl>();
+                enemyCtrl.TakeHit(damage);
+            }
+
+            Vector2 instatiatePos = new Vector2(hit.transform.position.x, 
+            hit.transform.position.y + 1f);
+
+            GameObject _sparkFX = Instantiate(sparkFX, instatiatePos, 
+            Quaternion.identity);
+            Destroy (_sparkFX);
+        }
+
+        //weaponAnim.SetTrigger("shoot");
+    }
+
     void AdjustAimWidth (float distance)
     {
         float currentWidth = Mathf.Clamp(Mathf.Abs(distance), 3f, 9f);
@@ -135,10 +159,12 @@ public class PlayerCtrl : MonoBehaviour
         }
     }
 
+PrimitiveType
     public void TakeShock(int damage)
     {
         TakeHit(damage);
     }
+
 
     public void TakeHit(int damage)
     {
