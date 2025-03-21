@@ -4,12 +4,13 @@ using UnityEngine;
 
 public class MineDrone : EnemyCtrl
 {
-    [SerializeField] private float explosionDistance;
+    [SerializeField] float explosionDistance;
 
-    // Update is called once per frame
+    // Start is called before the first frame update
+
     public override void Update()
     {
-        distance = Vector2.Distance(transform.position, player.transform.position);
+        distance = Vector2.Distance(player.transform.position, transform.position);
 
         if (distance < explosionDistance)
         {
@@ -19,14 +20,14 @@ public class MineDrone : EnemyCtrl
 
     void ActivateAtk()
     {
-        anim.SetTrigger("Activate");
+        anim.SetTrigger("activate");
     }
 
-    void Explode()
+    void LargeExplosion()
     {
-        Vector2 instatePos = new Vector2(transform.position.x, transform.position.y + 1f);
-
-        GameObject fx = Instantiate (sExplosionFX, instatePos, transform.rotation);
+        Vector2 instantiatePos = new Vector2(transform.position.x, transform.position.y + 1f);
+        
+        GameObject fx = Instantiate(sExplosionFX, instantiatePos, transform.rotation);
         Destroy(fx, 3f);
     }
 }

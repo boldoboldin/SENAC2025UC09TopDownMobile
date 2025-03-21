@@ -146,6 +146,58 @@ MonoBehaviour:
       m_SpriteOverride: {fileID: -2116379003, guid: 7c5f1bbb16ccd6946b1549acdd546151, type: 3}
     m_FromMain: 1
     m_EntryOverrideCount: 10
+  - m_Name: LowAtk
+    m_Hash: 79294680
+    m_CategoryList: []
+    m_OverrideEntries:
+    - m_Name: iolanda_low_atk_spr_sheet_0
+      m_Hash: 308106158
+      m_Sprite: {fileID: -1965563989, guid: 303963eafe47aec45b34c3d2ceff8fbd, type: 3}
+      m_FromMain: 1
+      m_SpriteOverride: {fileID: 1728186325, guid: 303963eafe47aec45b34c3d2ceff8fbd, type: 3}
+    - m_Name: iolanda_low_atk_spr_sheet_1
+      m_Hash: 626680632
+      m_Sprite: {fileID: 1295536015, guid: 303963eafe47aec45b34c3d2ceff8fbd, type: 3}
+      m_FromMain: 1
+      m_SpriteOverride: {fileID: -1510025675, guid: 303963eafe47aec45b34c3d2ceff8fbd, type: 3}
+    - m_Name: iolanda_low_atk_spr_sheet_2
+      m_Hash: 1012085378
+      m_Sprite: {fileID: -1077305168, guid: 303963eafe47aec45b34c3d2ceff8fbd, type: 3}
+      m_FromMain: 1
+      m_SpriteOverride: {fileID: -1500624490, guid: 303963eafe47aec45b34c3d2ceff8fbd, type: 3}
+    - m_Name: iolanda_low_atk_spr_sheet_3
+      m_Hash: 190054932
+      m_Sprite: {fileID: -1297641918, guid: 303963eafe47aec45b34c3d2ceff8fbd, type: 3}
+      m_FromMain: 1
+      m_SpriteOverride: {fileID: -1807532697, guid: 303963eafe47aec45b34c3d2ceff8fbd, type: 3}
+    m_FromMain: 1
+    m_EntryOverrideCount: 4
+  - m_Name: HighAtk
+    m_Hash: 815279510
+    m_CategoryList: []
+    m_OverrideEntries:
+    - m_Name: iolanda_high_atk_spr_sheet_0
+      m_Hash: 177798525
+      m_Sprite: {fileID: 2064917828, guid: 07f9a7266405f1342b9ebdc4218fc176, type: 3}
+      m_FromMain: 1
+      m_SpriteOverride: {fileID: -931566068, guid: 07f9a7266405f1342b9ebdc4218fc176, type: 3}
+    - m_Name: iolanda_high_atk_spr_sheet_1
+      m_Hash: 1033883115
+      m_Sprite: {fileID: -1002793889, guid: 07f9a7266405f1342b9ebdc4218fc176, type: 3}
+      m_FromMain: 1
+      m_SpriteOverride: {fileID: -871032783, guid: 07f9a7266405f1342b9ebdc4218fc176, type: 3}
+    - m_Name: iolanda_high_atk_spr_sheet_2
+      m_Hash: 613850193
+      m_Sprite: {fileID: -928587403, guid: 07f9a7266405f1342b9ebdc4218fc176, type: 3}
+      m_FromMain: 1
+      m_SpriteOverride: {fileID: 742300488, guid: 07f9a7266405f1342b9ebdc4218fc176, type: 3}
+    - m_Name: iolanda_high_atk_spr_sheet_3
+      m_Hash: 328314055
+      m_Sprite: {fileID: -866314096, guid: 07f9a7266405f1342b9ebdc4218fc176, type: 3}
+      m_FromMain: 1
+      m_SpriteOverride: {fileID: -1298893766, guid: 07f9a7266405f1342b9ebdc4218fc176, type: 3}
+    m_FromMain: 1
+    m_EntryOverrideCount: 4
   m_PrimaryLibraryGUID: bcf1cc12df4e25145916b70471c077b5
-  m_ModificationHash: 638753999068489609
+  m_ModificationHash: 638766051875128881
   m_Version: 1

@@ -7,16 +7,17 @@ public class PlayerCtrl : MonoBehaviour
     private Rigidbody2D rb;
     private Animator anim, weaponAnim;
 
-    [SerializeField] private GameObject weapon, shotPos, smokeFX,  sparkFX;
-    [SerializeField] float shotTimer;
-    private float currentShotTimer = 0f;
+    [SerializeField] private GameObject weapon, shotPos, shotFX, sparkFX, smokeFX;
+
+    [SerializeField] private int hp;
+    [SerializeField] float maxSpd, shotTimer;
     [SerializeField] SpriteRenderer aim;
-    
-    [SerializeField] protected int hp, damage;
-    [SerializeField] float maxSpd;
-    
-    private bool canMove = true, isFliped = false, isAiming = false;
-    [SerializeField] LayerMask ignoredLayers;
+    public float currentShotTimer = 0f;
+    public int damage;
+
+    [SerializeField] private bool isFliped = false, isAiming = false, canMove = true;
+
+    public LayerMask ignoreLayer;
 
     // Start is called before the first frame update
     void Start()
@@ -29,10 +30,11 @@ public class PlayerCtrl : MonoBehaviour
     // Update is called once per frame
     void FixedUpdate()
     {
+        WeaponMove();
         Move();
     }
 
-    void Move()
+    private void Move()
     {
         float inputX = leftJoystick.Horizontal;
         float inputY = leftJoystick.Vertical;
@@ -41,90 +43,47 @@ public class PlayerCtrl : MonoBehaviour
 
         float currentSpd = Mathf.Lerp(0, maxSpd, direction.magnitude);
 
-        if (canMove)
+        if (canMove == true)
         {
-           if(isAiming)
-           {
+            if (isAiming)
+            {
                 rb.velocity = direction * currentSpd / 2;
-           }
-           else
-           {
+            }
+            else
+            {
                 rb.velocity = direction * currentSpd;
-           }
+            }
 
-           anim.SetFloat("moveInput", currentSpd);
+            anim.SetFloat("moveInput", currentSpd);
         }
         else
         {
             rb.velocity = Vector2.zero;
         }
 
-        if(!isAiming)
+        if (!isAiming)
         {
             if (inputX > 0)
             {
-                transform.localScale = new Vector2(-1, 1);
+                transform.localScale = new(-1, 1);
                 isFliped = true;
             }
-            else
+            
+            if (inputX < 0)
             {
-                transform.localScale = new Vector2(1, 1);
+                transform.localScale = new(1, 1);
                 isFliped = false;
             }
-
-            Vector2 aimDirection = isFliped ? weapon.transform.right : -weapon.transform.right;
-            RaycastHit2D hit = Physics2D.Raycast(weapon.transform.position, aimDirection, 9f, ~ignoredLayers);
-
-            if (hit.collider != null)
-            {
-                float distance = hit.distance;
-                //Ajustar mira
-            }
-        }
-        else
-        {
-            isAiming = false;
-        }
+        }   
     }
 
-    void Shoot()
-    {
-        Vector2 direction = isFliped ?  weapon.transform.right : -weapon.transform.right;
-        RaycastHit2D hit = Physics2D.Raycast (weapon.transform.position, direction, Mathf.Infinity, ~ignoredLayers);
-
-        if (hit.collider != null)
-        {
-            if (hit.collider.CompareTag("Enemy"))
-            {
-                EnemyCtrl enemyCtrl = hit.collider.GetComponent<EnemyCtrl>();
-                enemyCtrl.TakeHit(damage);
-            }
-
-            Vector2 instatiatePos = new Vector2(hit.transform.position.x, 
-            hit.transform.position.y + 1f);
-
-            GameObject _sparkFX = Instantiate(sparkFX, instatiatePos, 
-            Quaternion.identity);
-            Destroy (_sparkFX);
-        }
-
-        //weaponAnim.SetTrigger("shoot");
-    }
-
-    void AdjustAimWidth (float distance)
-    {
-        float currentWidth = Mathf.Clamp(Mathf.Abs(distance), 3f, 9f);
-        aim.size = new Vector2(currentWidth, 0.0625f);
-    }
-
-    void WeaponMove()
+    private void WeaponMove()
     {
         float inputX = rightJoystick.Horizontal;
         float inputY = rightJoystick.Vertical;
 
         Vector2 direction = isFliped ? new Vector2(inputX, inputY) : new Vector2(-inputX, -inputY);
-    
-    
+
         if (direction.magnitude > 0)
         {
             float angle = Mathf.Atan2(direction.y, direction.x) * Mathf.Rad2Deg;
@@ -136,42 +95,91 @@ public class PlayerCtrl : MonoBehaviour
         {
             isAiming = true;
 
-            if(currentShotTimer <= shotTimer)
+            if (currentShotTimer <= shotTimer)
             {
                 currentShotTimer += 1 * Time.deltaTime;
             }
             else
             {
-                // atirar aqui
-                currentShotTimer = 9;
+                Shoot();
+                currentShotTimer = 0f;
             }
 
             if (inputX > 0)
             {
-                transform.localScale = new Vector2(-1, 1);
+                transform.localScale = new(-1, 1);
                 isFliped = true;
             }
             else
             {
-                transform.localScale = new Vector2(1, 1);
+                transform.localScale = new(1, 1);
                 isFliped = false;
             }
+
+            Vector2 aimrDirection = isFliped ? weapon.transform.right : -weapon.transform.right;
+            RaycastHit2D hit = Physics2D.Raycast(weapon.transform.position, aimrDirection, 9f, ~ignoreLayer);
+
+            if (hit.collider != null)
+            {
+                float distance = hit.distance; 
+                AdjustAimWidth(distance);
+            }
+            else
+            {
+                AdjustAimWidth(9f);
+            }
+        }
+        else
+        {
+            isAiming = false;
         }
     }
 
-PrimitiveType
+    private void AdjustAimWidth(float distance)
+    {
+        float currentWidth = Mathf.Clamp(Mathf.Abs(distance), 0.5f, 9f);
+        aim.size = new Vector2(currentWidth, 0.0625f);
+    }
+
+    private void Shoot()
+    {
+        Vector2 direction = isFliped ? weapon.transform.right : -weapon.transform.right;
+        RaycastHit2D hit = Physics2D.Raycast(weapon.transform.position, direction, 12f, ~ignoreLayer);
+
+        if (hit.collider != null)
+        {
+            Debug.Log("Hit: " + hit.collider.name);
+
+            if (hit.collider.CompareTag("Enemy"))
+            {
+                EnemyCtrl enemyCtrl = hit.collider.GetComponent<EnemyCtrl>();
+
+                enemyCtrl.TakeHit(damage); 
+            }
+
+            Vector2 instantiatePos = new Vector2(hit.transform.position.x, hit.transform.position.y + 1f);
+
+            GameObject _sparkFX = Instantiate(sparkFX, instantiatePos, Quaternion.identity);
+            Destroy(_sparkFX, 1f);
+        }
+
+        //GameObject _shotFX = Instantiate(shotFX, shotPos.transform.position, Quaternion.identity);
+
+        //float angle = Mathf.Atan2(direction.y, direction.x) * Mathf.Rad2Deg;
+        //_shotFX.transform.rotation = Quaternion.Euler(new Vector3(0, 0, angle));
+        //Destroy(_shotFX, 1f);
+
+        weaponAnim.SetTrigger("shoot");
+    }
+
     public void TakeShock(int damage)
     {
         TakeHit(damage);
     }
 
-
     public void TakeHit(int damage)
     {
-        Debug.Log("Deu dano");
-
         anim.SetTrigger("electrocute");
-        canMove = false;
 
         hp -= damage;
 
@@ -181,14 +189,20 @@ PrimitiveType
         }
     }
 
-    public void ReturnMove()
+    public void MoveCtrl(int canMove)
     {
-        canMove = true;
+        if(canMove == 0)
+        {
+            this.canMove = false;
+        }
+        else
+        {
+            this.canMove = true;
+        }
     }
 
     private void Die()
     {
-        Debug.Log("F");
         //anim.SetTrigger("die");
     }
 }

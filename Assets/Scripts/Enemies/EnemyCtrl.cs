@@ -40,6 +40,14 @@ public class EnemyCtrl : MonoBehaviour
 
     private void Die()
     {
-        anim.SetTrigger("Die");
+        anim.SetTrigger("die");
+    }
+
+    public void SmallExplosion()
+    {
+        Vector2 instantiatePos = new Vector2(transform.position.x, transform.position.y + 1f);
+
+        GameObject fx = Instantiate(sExplosionFX, instantiatePos, transform.rotation);
+        Destroy(fx, 3f);
     }
 }

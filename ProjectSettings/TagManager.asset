@@ -3,18 +3,21 @@
 --- !u!78 &1
 TagManager:
   serializedVersion: 2
-  tags: []
+  tags:
+  - Enemy
+  - HitBox
+  - Obstacle
   layers:
   - Default
   - TransparentFX
   - Ignore Raycast
-  - 
+  - Player
   - Water
   - UI
-  - 
-  - 
-  - 
-  - 
+  - Enemy
+  - Obstacle
+  - Sceney
+  - Hitbox
   - 
   - 
   - 
@@ -38,6 +41,21 @@ TagManager:
   - 
   - 
   m_SortingLayers:
+  - name: Scenery
+    uniqueID: 3159733921
+    locked: 0
+  - name: WallsBG
+    uniqueID: 1830502187
+    locked: 0
   - name: Default
     uniqueID: 0
+    locked: 0
+  - name: Player
+    uniqueID: 4046452563
+    locked: 0
+  - name: WallsFG
+    uniqueID: 417987639
+    locked: 0
+  - name: FX
+    uniqueID: 3308431589
     locked: 0
